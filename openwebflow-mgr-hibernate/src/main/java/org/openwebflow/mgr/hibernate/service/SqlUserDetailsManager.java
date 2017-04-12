@@ -15,7 +15,6 @@ public class SqlUserDetailsManager implements UserDetailsManager, UserDetailsMan
 	@Autowired
 	SqlUserDetailsDao _dao;
 
-	@Override
 	public UserDetailsEntity findUserDetails(String userId) throws Exception
 	{
 		return _dao.findUser(userId);
@@ -28,7 +27,6 @@ public class SqlUserDetailsManager implements UserDetailsManager, UserDetailsMan
 	}
 
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-	@Override
 	public void saveUserDetails(UserDetailsEntity userDetails) throws Exception
 	{
 		SqlUserDetailsEntity sud = new SqlUserDetailsEntity(userDetails);

@@ -38,7 +38,6 @@ public class TaskDelagationAssignmentHandler implements TaskAssignmentHandler
 		return _membershipManager;
 	}
 
-	@Override
 	public void handleAssignment(TaskAssignmentHandlerChain chain, TaskEntity task, ActivityExecution execution)
 	{
 		//先执行其它规则

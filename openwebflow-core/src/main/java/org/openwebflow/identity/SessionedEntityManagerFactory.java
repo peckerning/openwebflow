@@ -16,13 +16,11 @@ public class SessionedEntityManagerFactory implements SessionFactory
 		_entityManager = entityManager;
 	}
 
-	@Override
 	public Class<?> getSessionType()
 	{
 		return _sessionType;
 	}
 
-	@Override
 	public Session openSession()
 	{
 		return _entityManager;

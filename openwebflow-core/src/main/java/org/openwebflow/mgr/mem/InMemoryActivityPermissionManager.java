@@ -17,7 +17,6 @@ public class InMemoryActivityPermissionManager implements ActivityPermissionMana
 		return processDefId + "--" + taskDefinitionKey;
 	}
 
-	@Override
 	public ActivityPermissionEntity load(String processDefinitionId, String taskDefinitionKey, boolean addOrRemove)
 	{
 		if (addOrRemove)
@@ -26,7 +25,6 @@ public class InMemoryActivityPermissionManager implements ActivityPermissionMana
 		return null;
 	}
 
-	@Override
 	public void removeAll()
 	{
 		_entryMap.clear();

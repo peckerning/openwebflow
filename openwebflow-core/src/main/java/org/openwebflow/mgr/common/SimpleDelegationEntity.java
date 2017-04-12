@@ -45,13 +45,11 @@ public class SimpleDelegationEntity implements DelegationEntity
 		return true;
 	}
 
-	@Override
 	public String getDelegate()
 	{
 		return _delegate;
 	}
 
-	@Override
 	public String getDelegated()
 	{
 		return _delegated;

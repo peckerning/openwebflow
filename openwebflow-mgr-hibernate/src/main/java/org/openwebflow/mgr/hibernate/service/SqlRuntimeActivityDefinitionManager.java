@@ -18,7 +18,6 @@ public class SqlRuntimeActivityDefinitionManager implements RuntimeActivityDefin
 	@Autowired
 	SqlRuntimeActivityDefinitionDao _dao;
 
-	@Override
 	public List<RuntimeActivityDefinitionEntity> list() throws Exception
 	{
 		List<RuntimeActivityDefinitionEntity> list = new ArrayList<RuntimeActivityDefinitionEntity>();
@@ -37,14 +36,12 @@ public class SqlRuntimeActivityDefinitionManager implements RuntimeActivityDefin
 		return list;
 	}
 
-	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 	public void removeAll() throws Exception
 	{
 		_dao.deleteAll();
 	}
 
-	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 	public void save(RuntimeActivityDefinitionEntity entity) throws Exception
 	{

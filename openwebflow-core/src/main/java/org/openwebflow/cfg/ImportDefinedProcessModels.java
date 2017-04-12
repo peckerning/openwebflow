@@ -18,13 +18,11 @@ public class ImportDefinedProcessModels implements StartEngineEventListener
 {
 	File _modelDir;
 
-	@Override
 	public void afterStartEngine(ProcessEngineConfigurationImpl conf, ProcessEngine processEngine) throws Exception
 	{
 		checkAndImportNewModels(processEngine.getRepositoryService());
 	}
 
-	@Override
 	public void beforeStartEngine(ProcessEngineConfigurationImpl conf)
 	{
 	}
@@ -45,7 +43,6 @@ public class ImportDefinedProcessModels implements StartEngineEventListener
 
 		File[] files = _modelDir.listFiles(new FilenameFilter()
 		{
-			@Override
 			public boolean accept(File dir, String name)
 			{
 				return name.endsWith(".bpmn");

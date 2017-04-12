@@ -49,7 +49,6 @@ public class SqlUserDetailsEntity extends UserDetailsEntitySupport
 		return _phoneNumber;
 	}
 
-	@Override
 	public <T> T getProperty(String name)
 	{
 		if (UserDetailsEntity.STRING_PROPERTY_EMAIL.equals(name))
@@ -67,7 +66,6 @@ public class SqlUserDetailsEntity extends UserDetailsEntitySupport
 		return null;
 	}
 
-	@Override
 	public String[] getPropertyNames()
 	{
 		return new String[] { UserDetailsEntity.STRING_PROPERTY_EMAIL,
@@ -75,7 +73,6 @@ public class SqlUserDetailsEntity extends UserDetailsEntitySupport
 				UserDetailsEntity.STRING_PROPERTY_USER_ID };
 	}
 
-	@Override
 	public String getUserId()
 	{
 		return _userId;
@@ -96,7 +93,6 @@ public class SqlUserDetailsEntity extends UserDetailsEntitySupport
 		_phoneNumber = phoneNumber;
 	}
 
-	@Override
 	public <T> void setProperty(String name, T value)
 	{
 		if (UserDetailsEntity.STRING_PROPERTY_EMAIL.equals(name))

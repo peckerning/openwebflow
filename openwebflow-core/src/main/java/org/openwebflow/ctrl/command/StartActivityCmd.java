@@ -20,7 +20,6 @@ public class StartActivityCmd implements Command<java.lang.Void>
 		_executionId = executionId;
 	}
 
-	@Override
 	public Void execute(CommandContext commandContext)
 	{
 		//创建新任务

@@ -20,7 +20,6 @@ public class SqlMembershipManager implements IdentityMembershipManager, Identity
 	@Autowired
 	SqlMembershipDao _dao;
 
-	@Override
 	public List<String> findGroupIdsByUser(String userId)
 	{
 		Map<String, Object> names = new HashMap<String, Object>();
@@ -39,7 +38,6 @@ public class SqlMembershipManager implements IdentityMembershipManager, Identity
 		return new ArrayList<String>(names.keySet());
 	}
 
-	@Override
 	public List<String> findUserIdsByGroup(String groupId)
 	{
 		Map<String, Object> names = new HashMap<String, Object>();
@@ -64,7 +62,6 @@ public class SqlMembershipManager implements IdentityMembershipManager, Identity
 		_dao.deleteAll();
 	}
 
-	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 	public void saveMembership(String userId, String groupId) throws Exception
 	{

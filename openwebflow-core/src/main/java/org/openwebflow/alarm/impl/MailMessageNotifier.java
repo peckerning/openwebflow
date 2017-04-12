@@ -24,7 +24,6 @@ public class MailMessageNotifier implements MessageNotifier, InitializingBean
 
 	private String _subjectTemplate;
 
-	@Override
 	public void afterPropertiesSet() throws Exception
 	{
 		_messageTemplate = IOUtils.readStringAndClose(new InputStreamReader(_messageTemplateResource.getInputStream()),
@@ -51,7 +50,6 @@ public class MailMessageNotifier implements MessageNotifier, InitializingBean
 		return _subjectTemplate;
 	}
 
-	@Override
 	public void notify(UserDetailsEntity[] users, Task task) throws Exception
 	{
 		for (UserDetailsEntity user : users)

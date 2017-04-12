@@ -12,7 +12,6 @@ public class TaskAssignmentHandlerChainImpl implements TaskAssignmentHandlerChai
 {
 	static TaskAssignmentHandler NULL_HANDLER = new TaskAssignmentHandler()
 	{
-		@Override
 		public void handleAssignment(TaskAssignmentHandlerChain chain, TaskEntity task, ActivityExecution execution)
 		{
 		}
@@ -43,7 +42,6 @@ public class TaskAssignmentHandlerChainImpl implements TaskAssignmentHandlerChai
 		return _handlers.pop();
 	}
 
-	@Override
 	public void resume(TaskEntity task, ActivityExecution execution)
 	{
 		next().handleAssignment(this, task, execution);

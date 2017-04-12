@@ -24,7 +24,6 @@ public class DummyFormType extends AbstractFormType
 		return null;
 	}
 
-	@Override
 	public String getName()
 	{
 		return _name;

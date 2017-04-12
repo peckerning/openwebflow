@@ -27,7 +27,6 @@ public class ActivityPermissionAssignmentHandler implements TaskAssignmentHandle
 		return _activityPermissionManager;
 	}
 
-	@Override
 	public void handleAssignment(TaskAssignmentHandlerChain chain, TaskEntity task, ActivityExecution execution)
 	{
 		//设置assignment信息

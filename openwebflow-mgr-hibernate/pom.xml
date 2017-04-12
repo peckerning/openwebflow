@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openwebflow-mgr-hibernate</artifactId>
 	<packaging>jar</packaging>
-	<name>openwebflow</name>
+	<name>openwebflow-mgr-hibernate</name>
 	<url>http://maven.apache.org</url>
 	<parent>
 		<groupId>org.openwebflow</groupId>

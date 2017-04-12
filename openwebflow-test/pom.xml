@@ -20,11 +20,11 @@
 			<version>0.9-SNAPSHOT</version>
 			<artifactId>openwebflow-core</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.openwebflow</groupId>
-			<version>0.9-SNAPSHOT</version>
-			<artifactId>openwebflow-mgr-hibernate</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.openwebflow</groupId>-->
+			<!--<version>0.9-SNAPSHOT</version>-->
+			<!--<artifactId>openwebflow-mgr-hibernate</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.openwebflow</groupId>
 			<version>0.9-SNAPSHOT</version>

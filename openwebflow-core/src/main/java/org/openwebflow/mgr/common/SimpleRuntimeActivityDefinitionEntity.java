@@ -51,51 +51,43 @@ public class SimpleRuntimeActivityDefinitionEntity implements RuntimeActivityDef
 
 	String _propertiesText;
 
-	@Override
 	public void deserializeProperties() throws IOException
 	{
 		ObjectMapper objectMapper = new ObjectMapper();
 		_properties = objectMapper.readValue(_propertiesText, Map.class);
 	}
 
-	@Override
 	public String getFactoryName()
 	{
 		return _factoryName;
 	}
 
-	@Override
 	public String getProcessDefinitionId()
 	{
 		return _processDefinitionId;
 	}
 
-	@Override
 	public String getProcessInstanceId()
 	{
 		return _processInstanceId;
 	}
 
-	@Override
 	public String getPropertiesText()
 	{
 		return _propertiesText;
 	}
 
-	@Override
 	public <T> T getProperty(String name)
 	{
 		return (T) _properties.get(name);
 	}
 
-	@Override
 	public void serializeProperties() throws JsonProcessingException
 	{
 		ObjectMapper objectMapper = new ObjectMapper();
 		_propertiesText = objectMapper.writeValueAsString(_properties);
 	}
 
-	@Override
 	public <T> void setProperty(String name, T value)
 	{
 		_properties.put(name, value);

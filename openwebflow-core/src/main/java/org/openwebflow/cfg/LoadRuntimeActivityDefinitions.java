@@ -12,7 +12,6 @@ public class LoadRuntimeActivityDefinitions implements StartEngineEventListener
 {
 	RuntimeActivityDefinitionManager _activityDefinitionManager;
 
-	@Override
 	public void afterStartEngine(ProcessEngineConfigurationImpl conf, ProcessEngine processEngine) throws Exception
 	{
 		for (RuntimeActivityDefinitionEntity entity : _activityDefinitionManager.list())
@@ -31,7 +30,6 @@ public class LoadRuntimeActivityDefinitions implements StartEngineEventListener
 		}
 	}
 
-	@Override
 	public void beforeStartEngine(ProcessEngineConfigurationImpl conf) throws Exception
 	{
 	}

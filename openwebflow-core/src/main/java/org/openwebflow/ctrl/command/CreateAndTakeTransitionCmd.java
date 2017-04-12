@@ -20,7 +20,6 @@ public class CreateAndTakeTransitionCmd implements Command<java.lang.Void>
 		_activity = activity;
 	}
 
-	@Override
 	public Void execute(CommandContext commandContext)
 	{
 		//创建新任务

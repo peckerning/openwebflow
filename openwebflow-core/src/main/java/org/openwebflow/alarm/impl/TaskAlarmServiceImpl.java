@@ -96,7 +96,6 @@ public class TaskAlarmServiceImpl implements TaskAlarmService, DisposableBean
 
 	UserDetailsManager _userDetailsManager;
 
-	@Override
 	public void destroy() throws Exception
 	{
 		_monitorTimer.cancel();
@@ -152,7 +151,6 @@ public class TaskAlarmServiceImpl implements TaskAlarmService, DisposableBean
 		_userDetailsManager = userDetailsManager;
 	}
 
-	@Override
 	public void start(ProcessEngine processEngine) throws Exception
 	{
 		_processEngine = processEngine;

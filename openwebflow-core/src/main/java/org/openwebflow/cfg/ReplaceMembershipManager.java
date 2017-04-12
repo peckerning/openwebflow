@@ -19,12 +19,10 @@ public class ReplaceMembershipManager implements StartEngineEventListener
 {
 	IdentityMembershipManager _customMembershipManager;
 
-	@Override
 	public void afterStartEngine(ProcessEngineConfigurationImpl conf, ProcessEngine processEngine)
 	{
 	}
 
-	@Override
 	public void beforeStartEngine(ProcessEngineConfigurationImpl conf)
 	{
 		List<SessionFactory> sessionFactories = new ArrayList<SessionFactory>();

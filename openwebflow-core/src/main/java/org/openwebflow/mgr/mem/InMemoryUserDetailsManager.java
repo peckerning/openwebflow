@@ -11,13 +11,11 @@ public class InMemoryUserDetailsManager implements UserDetailsManager, UserDetai
 {
 	Map<String, UserDetailsEntity> _users = new HashMap<String, UserDetailsEntity>();
 
-	@Override
 	public UserDetailsEntity findUserDetails(String userId)
 	{
 		return _users.get(userId);
 	}
 
-	@Override
 	public void removeAll()
 	{
 		_users.clear();

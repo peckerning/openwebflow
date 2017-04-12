@@ -20,7 +20,6 @@ public class SqlDelegationManager implements DelegationManager, DelegationManage
 	@Autowired
 	SqlDelegationDao _dao;
 
-	@Override
 	public String[] getDelegates(String delegated)
 	{
 		Map<String, Object> delegates = new HashMap<String, Object>();
@@ -39,7 +38,6 @@ public class SqlDelegationManager implements DelegationManager, DelegationManage
 		return delegates.keySet().toArray(new String[0]);
 	}
 
-	@Override
 	public List<DelegationEntity> listDelegationEntities()
 	{
 		try
@@ -58,7 +56,6 @@ public class SqlDelegationManager implements DelegationManager, DelegationManage
 		_dao.deleteAll();
 	}
 
-	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 	public void saveDelegation(String delegated, String delegate) throws Exception
 	{

@@ -13,7 +13,6 @@ public class SqlTaskNotificationManager implements TaskNotificationManager, Task
 	@Autowired
 	SqlNotificationDao _dao;
 
-	@Override
 	public boolean isNotified(String taskId) throws Exception
 	{
 		return _dao.findByTaskId(taskId) != null;
@@ -25,7 +24,6 @@ public class SqlTaskNotificationManager implements TaskNotificationManager, Task
 		_dao.deleteAll();
 	}
 
-	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 	public void setNotified(String taskId) throws Exception
 	{

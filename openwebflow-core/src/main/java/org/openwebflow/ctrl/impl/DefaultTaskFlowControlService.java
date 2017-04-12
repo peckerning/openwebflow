@@ -86,7 +86,6 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 	/**
 	 * 后加签
 	 */
-	@Override
 	public ActivityImpl[] insertTasksAfter(String targetTaskDefinitionKey, String... assignees) throws Exception
 	{
 		List<String> assigneeList = new ArrayList<String>();
@@ -104,19 +103,16 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 	/**
 	 * 前加签
 	 */
-	@Override
 	public ActivityImpl[] insertTasksBefore(String targetTaskDefinitionKey, String... assignees) throws Exception
 	{
 		return cloneAndMakeChain(targetTaskDefinitionKey, targetTaskDefinitionKey, assignees);
 	}
 
-	@Override
 	public void moveBack() throws Exception
 	{
 		moveBack(getCurrentTask());
 	}
 
-	@Override
 	public void moveBack(TaskEntity currentTaskEntity) throws Exception
 	{
 		ActivityImpl activity = (ActivityImpl) ProcessDefinitionUtils
@@ -126,13 +122,11 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 		moveTo(currentTaskEntity, activity);
 	}
 
-	@Override
 	public void moveForward() throws Exception
 	{
 		moveForward(getCurrentTask());
 	}
 
-	@Override
 	public void moveForward(TaskEntity currentTaskEntity) throws Exception
 	{
 		ActivityImpl activity = (ActivityImpl) ProcessDefinitionUtils
@@ -148,13 +142,11 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 	 * @param targetTaskDefinitionKey
 	 * @throws Exception
 	 */
-	@Override
 	public void moveTo(String targetTaskDefinitionKey) throws Exception
 	{
 		moveTo(getCurrentTask(), targetTaskDefinitionKey);
 	}
 
-	@Override
 	public void moveTo(String currentTaskId, String targetTaskDefinitionKey) throws Exception
 	{
 		moveTo(getTaskById(currentTaskId), targetTaskDefinitionKey);
@@ -174,7 +166,6 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 	 *            目标任务节点（在模型定义里面的节点名称）
 	 * @throws Exception
 	 */
-	@Override
 	public void moveTo(TaskEntity currentTaskEntity, String targetTaskDefinitionKey) throws Exception
 	{
 		ActivityImpl activity = ProcessDefinitionUtils.getActivity(_processEngine,
@@ -198,7 +189,6 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 	 * @throws IllegalAccessException
 	 * @throws IllegalArgumentException
 	 */
-	@Override
 	public ActivityImpl split(String targetTaskDefinitionKey, boolean isSequential, String... assignees)
 			throws Exception
 	{
@@ -223,7 +213,6 @@ public class DefaultTaskFlowControlService implements TaskFlowControlService
 		return clone;
 	}
 
-	@Override
 	public ActivityImpl split(String targetTaskDefinitionKey, String... assignee) throws Exception
 	{
 		return split(targetTaskDefinitionKey, true, assignee);

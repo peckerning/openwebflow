@@ -14,7 +14,6 @@ public class InMemoryDelegationManager implements DelegationManager, DelegationM
 {
 	List<DelegationEntity> _list = new ArrayList<DelegationEntity>();
 
-	@Override
 	public String[] getDelegates(String delegated)
 	{
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -27,7 +26,6 @@ public class InMemoryDelegationManager implements DelegationManager, DelegationM
 		return map.keySet().toArray(new String[0]);
 	}
 
-	@Override
 	public List<DelegationEntity> listDelegationEntities()
 	{
 		return new ArrayList<DelegationEntity>(_list);
@@ -38,7 +36,6 @@ public class InMemoryDelegationManager implements DelegationManager, DelegationM
 		_list.remove(new SimpleDelegationEntity(delegated, delegate));
 	}
 
-	@Override
 	public void removeAll()
 	{
 		_list.clear();

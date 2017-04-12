@@ -46,7 +46,6 @@ public class SimpleUserDetailsEntity extends UserDetailsEntitySupport
 		return (T) _map.get(name);
 	}
 
-	@Override
 	public String[] getPropertyNames()
 	{
 		return _map.keySet().toArray(new String[0]);

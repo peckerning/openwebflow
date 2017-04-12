@@ -651,7 +651,6 @@ public abstract class AbstractProcessEngineTest
 
 		taskAlarmService.setMessageNotifier(new MessageNotifier()
 		{
-			@Override
 			public void notify(UserDetailsEntity[] users, Task task) throws Exception
 			{
 				for (UserDetailsEntity ude : users)

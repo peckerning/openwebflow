@@ -54,7 +54,6 @@ public class InMemoryMembershipManager implements IdentityMembershipManager, Ide
 		return group;
 	}
 
-	@Override
 	public List<String> findGroupIdsByUser(String userId)
 	{
 		Map<String, Object> groupIds = new HashMap<String, Object>();
@@ -69,7 +68,6 @@ public class InMemoryMembershipManager implements IdentityMembershipManager, Ide
 		return new ArrayList<String>(groupIds.keySet());
 	}
 
-	@Override
 	public List<String> findUserIdsByGroup(String groupId)
 	{
 		Map<String, Object> userIds = new HashMap<String, Object>();
@@ -94,7 +92,6 @@ public class InMemoryMembershipManager implements IdentityMembershipManager, Ide
 		return _groups.values();
 	}
 
-	@Override
 	public void removeAll()
 	{
 		_groups.clear();

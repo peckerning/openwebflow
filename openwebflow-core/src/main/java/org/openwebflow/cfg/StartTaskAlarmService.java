@@ -10,7 +10,6 @@ public class StartTaskAlarmService implements StartEngineEventListener
 
 	TaskAlarmService _taskAlarmService;
 
-	@Override
 	public void afterStartEngine(ProcessEngineConfigurationImpl conf, ProcessEngine processEngine) throws Exception
 	{
 		if (_runOnStartup)
@@ -19,7 +18,6 @@ public class StartTaskAlarmService implements StartEngineEventListener
 		}
 	}
 
-	@Override
 	public void beforeStartEngine(ProcessEngineConfigurationImpl conf) throws Exception
 	{
 	}

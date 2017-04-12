@@ -16,7 +16,6 @@ public class DeleteRunningTaskCmd implements Command<java.lang.Void>
 		_currentTaskEntity = currentTaskEntity;
 	}
 
-	@Override
 	public Void execute(CommandContext commandContext)
 	{
 		//删除当前的任务

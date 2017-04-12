@@ -13,12 +13,10 @@ public class ReplaceTaskAssignmentHandler implements StartEngineEventListener
 {
 	List<TaskAssignmentHandler> _handlers;
 
-	@Override
 	public void afterStartEngine(ProcessEngineConfigurationImpl conf, ProcessEngine processEngine) throws Exception
 	{
 	}
 
-	@Override
 	public void beforeStartEngine(ProcessEngineConfigurationImpl processEngineConfiguration)
 	{
 		ActivityBehaviorFactory activityBehaviorFactory = processEngineConfiguration.getActivityBehaviorFactory();

@@ -25,7 +25,6 @@ public class MyUserTaskActivityBehavior extends UserTaskActivityBehavior
 		final MyUserTaskActivityBehavior myUserTaskActivityBehavior = this;
 		handlerChain.addHandler(new TaskAssignmentHandler()
 		{
-			@Override
 			public void handleAssignment(TaskAssignmentHandlerChain chain, TaskEntity task, ActivityExecution execution)
 			{
 				myUserTaskActivityBehavior.superHandleAssignments(task, execution);
